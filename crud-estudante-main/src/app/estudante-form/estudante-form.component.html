@@ -1,0 +1,41 @@
+<div class="row">
+  <div class="col-8 m-auto">
+    <form [formGroup]="formGroupEstudante">
+      <div class="mb-3">
+        <div class="display-6 text-center">
+          Cadastro de Estudantes
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="name" class="form-label">Nome:</label>
+        <input type="text" formControlName="name" class="form-control" id="name" placeholder="Informe seu nome">
+        <div *ngIf="submitted && name.invalid">
+          <small class="text-danger">Nome inválido!</small>
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="curso" class="form-label">Curso:</label>
+        <input type="text" formControlName="curso" class="form-control" id="curso" placeholder="Informe seu curso">
+        <div *ngIf="submitted && curso.invalid">
+          <small class="text-danger">Curso inválido!</small>
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="cpf" class="form-label">CPF:</label>
+        <input type="number" formControlName="cpf" class="form-control" id="cpf" placeholder="Insira seu CPF">
+      </div>
+      <div class="mb-3">
+        <label for="idade" class="form-label">Idade:</label>
+        <input type="number" formControlName="idade" class="form-control" id="idade" placeholder="Informe sua Idade">
+      </div>
+      <div class="mb-3">
+        <label for="telefone" class="form-label">Telefone:</label>
+        <input type="text" formControlName="telefone" class="form-control" id="telefone" placeholder="Insira seu telefone">
+      </div>
+      <div class="mb-3 d-flex justify-content-end gap-2">
+        <button class="btn btn-info" (click)="save()">Salvar</button>
+        <button class="btn btn-danger" (click)="deletar()">Limpar</button>
+      </div>
+    </form>
+  </div>
+</div>
