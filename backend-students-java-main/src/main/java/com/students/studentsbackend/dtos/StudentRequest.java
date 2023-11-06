@@ -12,13 +12,13 @@ public record StudentRequest(
     String cpf,
 
     @Min(value = 0, message = "Idade não pode ser em branco")
-    String idade,
+    String age,
 
     @NotBlank(message = "Telefone não pode ser em branco")
-    String telefone,
+    String phone,
 
     @NotBlank(message = "Curso não pode ser em branco")
-    String curso
+    String course
 ) {
     
 }

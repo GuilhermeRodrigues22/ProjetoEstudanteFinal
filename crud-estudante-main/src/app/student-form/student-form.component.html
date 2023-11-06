@@ -1,6 +1,6 @@
 <div class="row">
   <div class="col-8 m-auto">
-    <form [formGroup]="formGroupEstudante">
+    <form [formGroup]="formGroupStudent">
       <div class="mb-3">
         <div class="display-6 text-center">
           Cadastro de Estudantes
@@ -14,27 +14,36 @@
         </div>
       </div>
       <div class="mb-3">
-        <label for="curso" class="form-label">Curso:</label>
-        <input type="text" formControlName="curso" class="form-control" id="curso" placeholder="Informe seu curso">
-        <div *ngIf="submitted && curso.invalid">
+        <label for="course" class="form-label">Curso:</label>
+        <input type="text" formControlName="course" class="form-control" id="course" placeholder="Informe seu curso">
+        <div *ngIf="submitted && course.invalid">
           <small class="text-danger">Curso inválido!</small>
         </div>
       </div>
       <div class="mb-3">
         <label for="cpf" class="form-label">CPF:</label>
         <input type="number" formControlName="cpf" class="form-control" id="cpf" placeholder="Insira seu CPF">
+        <div *ngIf="submitted && cpf.invalid">
+          <small class="text-danger">CPF inválido!</small>
+        </div>
       </div>
       <div class="mb-3">
-        <label for="idade" class="form-label">Idade:</label>
-        <input type="number" formControlName="idade" class="form-control" id="idade" placeholder="Informe sua Idade">
+        <label for="age" class="form-label">Idade:</label>
+        <input type="number" formControlName="age" class="form-control" id="age" placeholder="Informe sua Idade">
+        <div *ngIf="submitted && age.invalid">
+          <small class="text-danger">Idade inválida!</small>
+        </div>
       </div>
       <div class="mb-3">
-        <label for="telefone" class="form-label">Telefone:</label>
-        <input type="text" formControlName="telefone" class="form-control" id="telefone" placeholder="Insira seu telefone">
+        <label for="phone" class="form-label">Telefone:</label>
+        <input type="text" formControlName="phone" class="form-control" id="phone" placeholder="Insira seu telefone">
+        <div *ngIf="submitted && phone.invalid">
+          <small class="text-danger">Telefone inválido!</small>
+        </div>
       </div>
       <div class="mb-3 d-flex justify-content-end gap-2">
         <button class="btn btn-info" (click)="save()">Salvar</button>
-        <button class="btn btn-danger" (click)="deletar()">Limpar</button>
+        <button class="btn btn-danger" (click)="clear()">Limpar</button>
       </div>
     </form>
   </div>

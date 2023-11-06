@@ -4,15 +4,16 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
-import { EstudanteComponent } from './estudante/estudante.component';
+import { StudentComponent } from './student/student.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { EstudanteFormComponent } from './estudante-form/estudante-form.component';
+import { StudentFormComponent } from './student-form/student-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    EstudanteComponent,
-    EstudanteFormComponent
+    StudentFormComponent,
+    StudentComponent
+
   ],
   imports: [
     BrowserModule,

@@ -10,9 +10,9 @@ public class StudentMapper {
         Student student = new Student();
         student.setName(request.name());
         student.setCpf(request.cpf());
-        student.setIdade(request.idade());
-        student.setTelefone(request.telefone());
-        student.setCurso(request.curso());
+        student.setAge(request.age());
+        student.setPhone(request.phone());
+        student.setCourse(request.course());
         return student;
     }
 
@@ -21,9 +21,9 @@ public class StudentMapper {
                 student.getId(),
                 student.getName(),
                 student.getCpf(),
-                student.getIdade(),
-                student.getTelefone(),
-                student.getCurso()
+                student.getAge(),
+                student.getPhone(),
+                student.getCourse()
         );
     }
 }

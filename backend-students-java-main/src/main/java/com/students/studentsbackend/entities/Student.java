@@ -16,16 +16,18 @@ public class Student implements Serializable{
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(length = 1024,nullable = false,  name ="student_name")
+    @Column(length = 1024,nullable = false,  name ="name")
     private String name;
  
-    private String curso;
+    private String course;
 
-    private String telefone;
+    private String phone;
     
     private String cpf;
 
-    private String idade;
+    private String age;
+
+    
 
     public Long getId() {
         return id;
@@ -43,20 +45,20 @@ public class Student implements Serializable{
         this.name = name;
     }
 
-    public String getCurso() {
-        return curso;
+    public String getCourse() {
+        return course;
     }
 
-    public void setCurso(String curso) {
-        this.curso = curso;
+    public void setCourse(String course) {
+        this.course = course;
     }
 
-    public String getTelefone() {
-        return telefone;
+    public String getPhone() {
+        return phone;
     }
 
-    public void setTelefone(String telefone) {
-        this.telefone = telefone;
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 
     public String getCpf() {
@@ -67,12 +69,12 @@ public class Student implements Serializable{
         this.cpf = cpf;
     }
 
-    public String getIdade() {
-        return idade;
+    public String getAge() {
+        return age;
     }
 
-    public void setIdade(String idade) {
-        this.idade = idade;
+    public void setAge(String age) {
+        this.age = age;
     }
 
     @Override
@@ -99,6 +101,7 @@ public class Student implements Serializable{
             return false;
         return true;
     }
+
     
     
 

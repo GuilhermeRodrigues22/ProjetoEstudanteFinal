@@ -51,8 +51,9 @@ public class StudentService {
             var updateStudent = this.repository.getReferenceById(id);
             updateStudent.setName(student.name());
             updateStudent.setCpf(student.cpf());
-            updateStudent.setTelefone(student.telefone());
-            updateStudent.setCurso(student.curso());
+            updateStudent.setPhone(student.phone());
+            updateStudent.setAge(student.age());
+            updateStudent.setCourse(student.course());
             this.repository.save(updateStudent);
         } catch (EntityNotFoundException e) {
             throw new EntityNotFoundException("Student not found");
