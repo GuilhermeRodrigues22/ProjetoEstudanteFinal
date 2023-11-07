@@ -23,7 +23,6 @@ public class StudentMapper {
                 student.getCpf(),
                 student.getAge(),
                 student.getPhone(),
-                student.getCourse()
-        );
+                student.getCourse());
     }
 }

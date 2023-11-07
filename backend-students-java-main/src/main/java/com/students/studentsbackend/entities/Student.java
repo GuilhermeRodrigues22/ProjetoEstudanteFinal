@@ -10,24 +10,22 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name="TBL_STUDENT")
-public class Student implements Serializable{
+@Table(name = "TBL_STUDENT")
+public class Student implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(length = 1024,nullable = false,  name ="name")
+    @Column(length = 1024, nullable = false, name = "name")
     private String name;
- 
+
     private String course;
 
     private String phone;
-    
+
     private String cpf;
 
     private String age;
-
-    
 
     public Long getId() {
         return id;
@@ -102,9 +100,4 @@ public class Student implements Serializable{
         return true;
     }
 
-    
-    
-
-   
-   
 }
